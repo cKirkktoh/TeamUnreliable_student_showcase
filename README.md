@@ -28,3 +28,5 @@ Update the information about the Interactive Media Design program, client projec
 HTML: Kirk Caspe
 CSS: Nikolai Meijer
 Video: Chao Chen, Jie Yang
+
+## License
