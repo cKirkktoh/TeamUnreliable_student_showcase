@@ -26,7 +26,7 @@ Update the information about the Interactive Media Design program, client projec
 
 ## Credits
 HTML: Kirk Caspe
-CSS: Nikolai Meijer
-Video: Chao Chen, Jie Yang
+CSS and responsiveness: Nikolai Meijer
+Video and media: Chao Chen, Jie Yang
 
 ## License
