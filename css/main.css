@@ -87,7 +87,18 @@ nav ul li a {
   
   h2 {
     padding:10px ;
-    font-size: 46px
+    font-size: 35px;
+    color: white;
+  }
+
+  h1 {
+    color: white;
+    font-size: 85px;
+  }
+
+  h3 {
+    color: white;
+    padding: 30px;
   }
 
 /*welcome*/
@@ -169,15 +180,178 @@ nav ul li a {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 100px;
   }
 
   .testimonial {
     width: 300px; /* Adjust the width of each testimonial as needed */
-    background-color: white; /* Set the background color of each testimonial */
-    padding: 20px;
+    background-color: transparent; /* Set the background color of each testimonial */
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     text-align: center;
-    color: #333; /* Set the text color of each testimonial */
+    color: white; /* Set the text color of each testimonial */
   }
+
+  .testimonial p {
+    margin-top: 20px; /* Add margin between <p> elements */
+    font-size: 30px
+}
+
+.testimonial-image {
+  width: 115px; /* Set the width of the testimonial images */
+  height: 115px; /* Set the height of the testimonial images */
+  display: block; /* Ensure images are displayed as blocks for proper spacing */
+  margin: 0 auto 10px; /* Add margin below the image */
+}
+
+/*Student Portfolios*/
+#Desktop_Portfolio {
+  text-align: center;
+  margin: 150px;
+}
+
+#Program_Description {
+  font-size: 40px;
+  color: #B3272D;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#Student_Portfolios {
+  color: #646469;
+  font-size: 72px;
+}
+
+#Student_Grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px; /* You can adjust the gap between items as needed */
+}
+
+#Student_Name {
+  text-align: center;
+  color: #B3272D;
+  font-size: 40px;
+  text-decoration: underline;
+  padding: 5px; /* Optional: Add padding for spacing within each grid item */
+}
+
+/* Our Work */
+#our_work h2 {
+  font-size: 72px;
+  margin-top: 130px;
+  margin-bottom: 20px; /* Add margin to the bottom of the heading */
+}
+
+#our_work {
+  background-color: #B3272D;
+  width: 1920px;
+  height: 1018px;
+  text-align: center;
+  color: white;
+  font-size: 50px;
+}
+
+#our_work_content {
+  padding: 20px;
+}
+
+#our_work_content p {
+  font-size: 40px;
+  margin: 70px;
+}
+
+#Image {
+  width: 580px;
+  height: 426px;
+  background-color: #646469;
+  margin: 0 auto;
+}
+
+.oval-button {
+  width: 270px;
+  height: 90px;
+  border-radius: 55px;
+  background-color: white;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  cursor: pointer;
+  color: #B3272D; 
+}
+
+/* The Process */
+#process, #steps {
+  text-align: center;
+}
+
+#process h1 {
+  font-size: 36px; 
+  margin-top: 20px; 
+  color: #646469;
+}
+
+#process p {
+  font-size: 35px;
+  color: #646469;
+}
+
+.content-container {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 20px;
+  text-align: left;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 20px 0; 
+}
+
+.step-number {
+  font-size: 24px;
+  font-weight: bold;
+  color: #E2231A;
+}
+
+.step-description {
+  font-size: 20px;
+  color: #646469;
+}
+
+.step-image {
+  max-width: 100%; 
+  height: auto; 
+}
+
+footer {
+  background-color: #B3272D;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  color: white;
+}
+
+footer nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  justify-content: center; 
+}
+
+footer nav ul li {
+  margin: 0;
+}
+
+footer nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
