@@ -8,55 +8,76 @@
     <link href="https://fonts.cdnfonts.com/css/gotham-6" rel="stylesheet">
   </head>
 <body>
+
   <header>
-    <div class="logo">
-        <img src="images/FanIDP3-logo.png" alt="Logo">
+    <div class="logo col-span-3 m-col-span-4 l-col-span-4 xl-col-span-4">
+        <picture>
+          <source media="(min-width: 768px)" srcset="images/FanIDP3-logo.png">
+          <img src="images/FanIDP3-logo-mobile.png" alt="Logo">
+        </picture>
     </div>
-    <nav>
+    <nav class="desktop m-col-span-8 l-col-span-8 xl-col-span-8">
         <ul>
-            <li><a href="#">IDP Program Info</a></li>
-            <li><a href="#">Fanshawe College</a></li>
+            <li><a href="https://www.fanshawec.ca/programs/idp3-interactive-media-design/next#">IDP Program Info</a></li>
+            <li><a href="https://www.fanshawec.ca/#">Fanshawe College</a></li>
         </ul>
     </nav>
-</header>
+
+    <div id="mobile-nav" class="mobile col-span-1">
+      <input type="checkbox" id="overlay-input">
+      <label for="overlay-input" id="overlay-button"><span></span></label>
+      <div id="overlay">
+          <ul>
+              <li><a href="https://www.fanshawec.ca/programs/idp3-interactive-media-design/next#">IDP Program Info</a></li>
+              <li><a href="https://www.fanshawec.ca/#">Fanshawe College</a></li>
+          </ul>
+      </div>
+    </div>
+  </header>
+
 <main>
   <section id="hero">
-      <div class="container">
-      <h2>Fanshawe<br>
-      School of Digital<br>
-      and<br>
-      Performing Arts<br>
-      </h2>
-      <h3>Presents:</h3>
-      <h2>Interactive Media Desgin</h2>
-      <h1>Industry Night</h1>
-      <h2>April 2024</h2>
+      <div class="container col-span-4 m-col-span-12 l-col-span-12 xl-col-span-12">
+        <h2>Fanshawe<br>
+        School of Digital<br>
+        and<br>
+        Performing Arts<br>
+        </h2>
+        <h3>Presents:</h3>
+        <h2>Interactive Media Desgin</h2>
+        <h1>Industry Night</h1>
+        <h2>April 2024</h2>
       </div>
   </section>
-  <div class="centered-section">
+
+  <div class="centered-section col-span-4 m-col-span-12 l-col-span-12 xl-col-span-12">
     <div class="headline">Welcome to</div>
     <div class="subheadline">Interactive Media Design</div>
-</div>
-<div class="center">
-  <video width="1200px" height="675px" controls="controls">
-    <source src="images/promotional_video.mp4" type="video/mp4" />
-  </video>
-</div>
+  </div>
 
-<div class="section">
-  <div class="section-content">
-      <div class="section-title">About Our Program</div>
-      <p class="section-paragraph">
-          Interactive Media Design provides students with a wide range of experience in design and media. Students learn to create engaging digital experiences. It's a unique course that prepares graduates for careers in digital media and design.
-      </p>
+  <div class="center">
+    <video class="col-span-4 m-col-span-12 l-col-span-12 xl-col-span-12" id="promo-vid" controls="controls">
+      <source src="images/promotional_video.mp4" type="video/mp4">
+    </video>
   </div>
-  <div class="section-image">
-      <img src="images/about-desktop.jpg" alt="Interactive Media Design Image">
+
+  <div class="section">
+      <div class="section-content">
+        <div class="section-title col-span-4 m-col-span-12 l-col-span-6 xl-col-span-6">About Our Program</div>
+        <p class="section-paragraph col-span-4 m-col-span-12 l-col-span-6 xl-col-span-6">
+        Interactive Media Design provides students with a wide range of experience in design and media. Students learn to create engaging digital experiences. It's a unique course that prepares graduates for careers in digital media and design.
+        </p>
+      </div>
+      <div class="section-image col-span-4 m-col-span-12 l-col-span-6 xl-col-span-6">
+        <picture>
+          <source media="(min-width: 768px)" srcset="images/about-desktop.jpg">
+          <img src="images/about-mobile.jpg" alt="Interactive Media Design Image">
+        </picture>
+      </div>
   </div>
-</div>
 
 <div class="testimonials">
-  <h1>Testimonials</h1>
+  <h2>Testimonials</h2>
   <div class="testimonial-row">
     <div class="testimonial">
       <img src="images/client-desktop.jpg" alt="Testimonial Image" class="testimonial-image">
@@ -81,49 +102,49 @@
   </div>
 </div>
 <div id="Desktop_Portfolio" class="Desktop_Portfolio">
-  <div id="Student_Portfolios">
+  <div id="Student_Portfolios" class="col-span-4 m-col-span-12 l-col-span-12 xl-col-span-12">
     <span>Student Portfolios</span>
   </div>
-  <div id="Program_Description">
+  <div id="Program_Description" class="desktop m-col-span-12 l-col-span-12 xl-col-span-12">
     In our program students get a chance to assemble portfolios of their<br>
     work to show what sets themselves apart from the rest, and to give<br>
     them a chance to display their unique strengths and abilities.
   </div>
   <div id="Student_Grid">
-    <div id="Student_Name">
+    <div class="Student_Name">
       <span>Student Name</span>
     </div>
-    <div id="Student_Name">
+    <div class="Student_Name">
       <span>Student Name</span>
     </div>
-    <div id="Student_Name">
+    <div class="Student_Name">
       <span>Student Name</span>
     </div>
-    <div id="Student_Name">
+    <div class="Student_Name">
       <span>Student Name</span>
     </div>
-    <div id="Student_Name">
+    <div class="Student_Name">
       <span>Student Name</span>
     </div>
-    <div id="Student_Name">
+    <div class="Student_Name">
       <span>Student Name</span>
     </div>
-    <div id="Student_Name">
+    <div class="Student_Name">
       <span>Student Name</span>
     </div>
-    <div id="Student_Name">
+    <div class="Student_Name">
       <span>Student Name</span>
     </div>
-    <div id="Student_Name">
+    <div class="Student_Name">
       <span>Student Name</span>
     </div>
-    <div id="Student_Name">
+    <div class="Student_Name">
       <span>Student Name</span>
     </div>
-    <div id="Student_Name">
+    <div class="Student_Name">
       <span>Student Name</span>
     </div>
-    <div id="Student_Name">
+    <div class="Student_Name">
       <span>Student Name</span>
     </div>
   </div>
@@ -133,18 +154,28 @@
   <h2>Our Work</h2>
   <div id="our_work_content">
     <!-- Add content for the "Our Work" section here -->
-    <div id="Image"></div>
-    <p>IDP Students learned to create websites from scratch using<br>
-       HTML, CSS, and JavaScript</p>
-       <div class="oval-button">Code</div>
-       <div class="oval-button">Design</div>
-       <div class="oval-button">Media</div>
-  </div>
+    <div id="Image" class="work-img">
+      <picture>
+        <source media="(min-width: 768px)" srcset="images/work-code-desktop.jpg">
+        <img src="images/work-code-mobile.jpg" alt="Picture of code">
+      </picture>
+      <p class="work-desc">IDP Students learn how to create unique websites from scratch using HTML, CSS, and JavaScript.</p>
+      <picture>
+        <source media="(min-width: 768px)" srcset="images/work-design-desktop.jpg">
+        <img src="images/work-design-mobile.jpg" alt="Picture of design">
+      </picture>
+      <p class="work-desc">IDP Students learn how to design effective, and visiually appealing websites, logos, and brands.</p>
+      <picture>
+        <source media="(min-width: 768px)" srcset="images/work-media-desktop.jpg">
+        <img src="images/work-media-mobile.jpg" alt="Picture of media">
+      </picture>
+      <p class="work-desc">IDP Students learn how to create and edit stunning photographs, videos, 3D renders and more.</p>
+    </div>
   </div>
 </div>
 
 <section id="process">
-  <h1>The Process</h1>
+  <h2>The Process</h2>
   <p>It all starts with an idea. Students are given a concept to base a website on, and from<br>
     there they follow a workflow that allows them to quickly create visually stunning and<br>
      highly functional websites.</p>
@@ -152,31 +183,44 @@
 
 <!-- Create a section with four steps -->
 <section id="steps">
+  <h2 class="hidden">Process steps</h2>
   <div class="content-container">
     <div class="step">
       <div class="step-number">Step 1: Brainstorm</div>
       <div class="step-description">This is where it all begins. Bringing together ideas, sketching out initial wireframe plans, and thinking of how to include all the necessary content. Brainstorming is a crucial step, and the rest of the project is based on what you come up with at this stage.</div>
-      <img class="step-image" src="images/about-desktop.jpg" alt="Step 1 Image">
+      <picture>
+        <source media="(min-width: 768px)" srcset="images/brainstorm-desktop.jpg">
+        <img class="step-image" src="images/brainstorm-mobile.jpg" alt="Step 1 Image">
+      </picture>
     </div>
     <div class="step">
       <div class="step-number">Step 2: Wireframe</div>
       <div class="step-description">Usually you start off with a sketch of how you want the website to look. From there you bring this into Adobe XD and create a "low-fidelity" wireframe, without colours or pictures. As you gain more content, the colours and photos get filled in until you have exactly what you want your site to look like ready to reference.</div>
-      <img class="step-image" src="images/about-desktop.jpg" alt="Step 2 Image">
+      <picture>
+        <source media="(min-width: 768px)" srcset="images/wireframe-desktop.jpg">
+        <img class="step-image" src="images/wireframe-mobile.jpg" alt="Step 2 Image">
+      </picture>
     </div>
     <div class="step">
       <div class="step-number">Step 3: Code</div>
       <div class="step-description">Once your wireframe is ready, you create a GitHub file for your website, create all the needed folders and files, and then the coding begins. We use 3 main languages: HTML, CSS, and JavaScript.
         We start by creating the structure with HTML and a CSS grid, add function with JS, and finally we style it with CSS. After all this is done we run it through a validator to ensure a bug-free site.</div>
-      <img class="step-image" src="images/about-desktop.jpg" alt="Step 3 Image">
+        <picture>
+          <source media="(min-width: 768px)" srcset="images/code-desktop.jpg">
+          <img class="step-image" src="images/code-mobile.jpg" alt="Step 3 Image">
+        </picture>
     </div>
     <div class="step">
       <div class="step-number">Step 4: Content</div>
       <div class="step-description">This can be done before, after, or during coding, depending on the available time and the amount of people working on the project. This step is the creation and preparation of content for the website. Photography and videography, designing, and editing of this content are all done in this step.</div>
-      <img class="step-image" src="images/about-desktop.jpg" alt="Step 4 Image">
+      <picture>
+        <source media="(min-width: 768px)" srcset="images/content-desktop.jpg">
+        <img class="step-image" src="images/content-mobile.jpg" alt="Step 4 Image">
+      </picture>
     </div>
   </div>
 </section>
-
+</main>
 <footer>
   <nav>
       <ul>

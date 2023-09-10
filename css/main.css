@@ -34,9 +34,7 @@ header {
 }
 
 .logo img {
-    width: 360px;
-    height: 90px;
-    max-height: 100%;
+    height: 4em;
 }
 
 nav ul {
@@ -57,13 +55,145 @@ nav ul li a {
     font-size: 18px; 
 }
 
+/* Mobile Nav */
+
+@keyframes bugfix {
+  from {
+    padding: 0;
+  }
+  to {
+    padding: 0;
+  }
+}
+@-webkit-keyframes bugfix {
+  from {
+    padding: 0;
+  }
+  to {
+    padding: 0;
+  }
+}
+#overlay-button {
+  position: absolute;
+  right: 1em;
+  padding: 26px 11px;
+  z-index: 5;
+  cursor: pointer;
+  user-select: none;
+}
+
+#overlay-button span {
+  height: 3px;
+  width: 25px;
+  border-radius: 2px;
+  background-color: #B3272D;
+  position: relative;
+  display: block;
+  transition: all 0.2s ease-in-out;
+}
+
+#overlay-input {
+  display: none;
+}
+
+#overlay-input:checked ~ #overlay {
+  visibility: visible;
+}
+
+#overlay-button span:before {
+  top: -7px;
+  visibility: visible;
+}
+#overlay-button span:after {
+  top: 7px;
+}
+#overlay-button span:before, #overlay-button span:after {
+  height: 3px;
+  width: 25px;
+  border-radius: 2px;
+  background-color: #E2231A;
+  position: absolute;
+  content: "";
+  transition: all 0.2s ease-in-out;
+}
+#overlay-button:hover span, #overlay-button:hover span:before, #overlay-button:hover span:after {
+  background: #E2231A;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+input[type=checkbox]:checked ~ #overlay {
+  visibility: visible;
+}
+input[type=checkbox]:checked ~ #overlay-button:hover span,
+input[type=checkbox]:checked ~ #overlay-button span {
+  background: transparent;
+}
+input[type=checkbox]:checked ~ #overlay-button span:before {
+  transform: rotate(45deg) translate(5px, 5px);
+  opacity: 1;
+}
+input[type=checkbox]:checked ~ #overlay-button span:after {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+#overlay {
+  height: 100vh;
+  width: 100vw;
+  background: #B3272D;
+  z-index: 2;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* This fixes scrolling issue */
+  overflow: hidden;
+}
+#overlay.active {
+  visibility: visible;
+}
+#overlay ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  height: 100vh;
+  padding-left: 0;
+  list-style-type: none;
+}
+#overlay ul li {
+  padding: .75em;
+}
+#overlay ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.25em;
+}
+#overlay ul li a:hover {
+  color: #E2231A;
+}
+
+#mobile-nav {
+  margin: 2em;
+}
+
 /* Hero Image */
 #hero {
     position: relative; 
     text-align: center; 
     padding: 20px; 
-    background-image: url(../images/image.png);
+    background-image: url(../images/desktop-hero.jpg);
+    background-position: center center;
+    background-size: cover;
     height: 930px;
+  }
+
+  @media (max-width: 767px) {
+    #hero {
+      background-image: url(../images/mobile-hero.jpg);
+      height: 778px;
+    }
   }
   
   #hero::before {
@@ -83,9 +213,10 @@ nav ul li a {
     position: relative; 
     z-index: 2; 
   }
-  
+
   h2 {
-    padding:10px ;
+    margin-top: 10px;
+    padding: 10px;
     font-size: 35px;
     color: white;
   }
@@ -100,12 +231,25 @@ nav ul li a {
     padding: 30px;
   }
 
+  @media (max-width: 767px) {
+    h2{
+      font-size: 24px;
+    }
+    h1{
+      font-size: 50px;
+    }
+    h3{
+      font-size: 20px;
+    }
+  }
+
 /*welcome*/
 .centered-section {
     text-align: center;
 }
 
 .headline {
+  margin-top: 1.2em;
     font-size: 42px;
     color: #646469;
 }
@@ -115,61 +259,90 @@ nav ul li a {
     color: #E2231A;
 }
 
+@media (max-width: 767px) {
+  .headline{
+    font-size: 20px;
+  }
+  .subheadline{
+    font-size: 28px;
+  }
+}
+
 /*video*/
+#promo-vid {
+  width: 580px;
+}
+
+@media (max-width: 767px) {
+  #promo-vid{
+    width: 358px;
+  }
+}
+
 .center {
     text-align: center;
   }
 
-  /* Style for the section */
+  /* Style about program */
   .section {
     display: flex;
     align-items: center;
-    padding: 20px;
-}
-
-/* Style for the text content */
-.section {
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    margin: 0 auto; 
-    max-width: 800px; 
-}
-
-/* Style for the text content */
-.section-content {
+    padding: 1em;
+    margin: 2em;
+    max-width: 1200px;
+  }
+  
+  /* Style for the text content */
+  .section-content {
     flex: 1;
-    padding: 20px;
-}
-
-/* Style for the title */
-.section-title {
+    padding: 1em;
+  }
+  
+  /* Style for the title */
+  .section-title {
     font-size: 55px;
     font-weight: bold;
     color: #E2231A;
-}
-
-/* Style for the paragraph */
-.section-paragraph {
+  }
+  
+  @media (max-width: 767px) {
+    .section-title {
+      font-size: 28px;
+    }
+  
+    
+    .section {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .section-image {
+      order: 1;
+    }
+  }
+  
+  /* Style for the paragraph */
+  .section-paragraph {
     font-size: 20px;
     line-height: 1.5;
     color: #646469;
-}
-
-/* Style for the image */
-.section-image {
+  }
+  
+  /* Style for the image */
+  .section-image {
     flex: 1;
     text-align: center;
-}
-
-.section-image img {
+  }
+  
+  .section-image img {
     max-width: 100%;
-    height: auto;
-}
+  }
+
+  /* Styles for testimonials */
 
 .testimonials {
     background-color: #E2231A;
-    padding: 20px;
+    padding: 1em;
     color: white;
     text-align: center; 
   }
@@ -179,11 +352,11 @@ nav ul li a {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 100px;
+    gap: 2.5em;
   }
 
   .testimonial {
-    width: 300px; 
+    width: 300px;
     background-color: transparent; 
     border-radius: 5px;
     text-align: center;
@@ -193,19 +366,34 @@ nav ul li a {
   .testimonial p {
     margin-top: 20px; 
     font-size: 30px
-}
+  }
+
+  @media (max-width: 767px) {
+    .testimonial h2{
+      font-size: 28px;
+    }
+    .testimonial p{
+      font-size: 20px;
+    }
+  }
 
 .testimonial-image {
   width: 115px; 
   height: 115px;
   display: block; 
   margin: 0 auto 10px;
+  border-radius: 50%;
 }
 
 /*Student Portfolios*/
 #Desktop_Portfolio {
   text-align: center;
-  margin: 150px;
+  margin: 2.5em;
+}
+
+#Student_Portfolios {
+  color: #646469;
+  font-size: 72px;
 }
 
 #Program_Description {
@@ -215,18 +403,13 @@ nav ul li a {
   margin-bottom: 50px;
 }
 
-#Student_Portfolios {
-  color: #646469;
-  font-size: 72px;
-}
-
 #Student_Grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px; /* You can adjust the gap between items as needed */
 }
 
-#Student_Name {
+.Student_Name {
   text-align: center;
   color: #B3272D;
   font-size: 40px;
@@ -234,49 +417,58 @@ nav ul li a {
   padding: 5px;
 }
 
+@media (max-width: 767px) {
+  #Student_Portfolios{
+    font-size: 28px;
+  }
+  #Program_Description{
+    font-size: 24px;
+  }
+  .Student_Name{
+    font-size: 20px;
+  }
+}
+
 /* Our Work */
 #our_work h2 {
   font-size: 72px;
-  margin-top: 130px;
-  margin-bottom: 20px; /* Add margin to the bottom of the heading */
+  margin-top: 1em;
+  padding-top: 1em;
 }
 
 #our_work {
   background-color: #B3272D;
-  width: 1920px;
-  height: 1018px;
+  height: auto;
   text-align: center;
   color: white;
   font-size: 50px;
 }
 
 #our_work_content {
-  padding: 20px;
+  padding: 1em;
 }
 
 #our_work_content p {
-  font-size: 40px;
-  margin: 70px;
+  font-size: 28px;
+  margin: 1em;
 }
 
 #Image {
   width: 580px;
-  height: 426px;
   background-color: #646469;
   margin: 0 auto;
 }
 
-.oval-button {
-  width: 270px;
-  height: 90px;
-  border-radius: 55px;
-  background-color: white;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 20px;
-  cursor: pointer;
-  color: #B3272D; 
+@media (max-width: 767px) {
+  #Image{
+    width: 358px;
+  }
+  #our_work h2{
+    font-size: 28px;
+  }
+  #our_work{
+    font-size: 20px;
+  }
 }
 
 /* The Process */
@@ -284,14 +476,14 @@ nav ul li a {
   text-align: center;
 }
 
-#process h1 {
+#process h2 {
   font-size: 36px; 
   margin-top: 20px; 
   color: #646469;
 }
 
 #process p {
-  font-size: 35px;
+  font-size: 28px;
   color: #646469;
 }
 
@@ -325,6 +517,17 @@ nav ul li a {
   height: auto; 
 }
 
+@media (max-width: 767px) {
+  #process h2{
+    font-size: 28px;
+  }
+  #process p{
+    font-size: 24px;
+  }
+  .step-number{
+    font-size: 20px;
+  }
+}
 
 /* Footer */
 footer {
