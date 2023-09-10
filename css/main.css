@@ -34,9 +34,9 @@ header {
 }
 
 .logo img {
-    width: 360px; /* Set the width to 360px */
-    height: 90px; /* Set the height to 137px */
-    max-height: 100%; /* Ensure the height scales appropriately */
+    width: 360px;
+    height: 90px;
+    max-height: 100%;
 }
 
 nav ul {
@@ -54,35 +54,34 @@ nav ul li a {
     text-decoration: none;
     color: red;
     font-weight: bold;
-    font-size: 18px; /* Adjust font size as needed */
+    font-size: 18px; 
 }
 
 /* Hero Image */
 #hero {
-    position: relative; /* Add position:relative to the parent container */
-    text-align: center; /* Center-align text */
-    padding: 20px; /* Add some padding for spacing */
+    position: relative; 
+    text-align: center; 
+    padding: 20px; 
     background-image: url(../images/image.png);
     height: 930px;
   }
   
-  /* Create an overlay using ::before pseudo-element */
   #hero::before {
-    content: ""; /* Required for pseudo-elements */
-    position: absolute; /* Position the overlay */
-    top: 0; /* Position from the top of the parent container */
-    left: 0; /* Position from the left of the parent container */
-    width: 100%; /* Cover the entire width of the parent container */
-    height: 100%; /* Cover the entire height of the parent container */
-    background-color: #B3272D; /* Red background color */
-    opacity: 0.7; /* Set the opacity for the overlay */
-    z-index: 1; /* Ensure the overlay is above the background image */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #B3272D; 
+    opacity: 0.7; 
+    z-index: 1; 
   }
   
   .container {
-    display: inline-block; /* Center-align the container */
-    position: relative; /* Add position:relative to center-align child elements */
-    z-index: 2; /* Ensure the container and its contents are above the overlay */
+    display: inline-block; 
+    position: relative; 
+    z-index: 2; 
   }
   
   h2 {
@@ -133,8 +132,8 @@ nav ul li a {
     display: flex;
     align-items: center;
     padding: 20px;
-    margin: 0 auto; /* Center the section horizontally */
-    max-width: 800px; /* Adjust the max width as needed */
+    margin: 0 auto; 
+    max-width: 800px; 
 }
 
 /* Style for the text content */
@@ -154,7 +153,7 @@ nav ul li a {
 .section-paragraph {
     font-size: 20px;
     line-height: 1.5;
-    color: #E2231A;
+    color: #646469;
 }
 
 /* Style for the image */
@@ -170,9 +169,9 @@ nav ul li a {
 
 .testimonials {
     background-color: #E2231A;
-    padding: 20px; /* Add padding for spacing */
-    color: white; /* Set text color to white for better visibility */
-    text-align: center; /* Center align the content */
+    padding: 20px;
+    color: white;
+    text-align: center; 
   }
 
   .testimonial-row {
@@ -184,23 +183,23 @@ nav ul li a {
   }
 
   .testimonial {
-    width: 300px; /* Adjust the width of each testimonial as needed */
-    background-color: transparent; /* Set the background color of each testimonial */
+    width: 300px; 
+    background-color: transparent; 
     border-radius: 5px;
     text-align: center;
-    color: white; /* Set the text color of each testimonial */
+    color: white; 
   }
 
   .testimonial p {
-    margin-top: 20px; /* Add margin between <p> elements */
+    margin-top: 20px; 
     font-size: 30px
 }
 
 .testimonial-image {
-  width: 115px; /* Set the width of the testimonial images */
-  height: 115px; /* Set the height of the testimonial images */
-  display: block; /* Ensure images are displayed as blocks for proper spacing */
-  margin: 0 auto 10px; /* Add margin below the image */
+  width: 115px; 
+  height: 115px;
+  display: block; 
+  margin: 0 auto 10px;
 }
 
 /*Student Portfolios*/
@@ -232,7 +231,7 @@ nav ul li a {
   color: #B3272D;
   font-size: 40px;
   text-decoration: underline;
-  padding: 5px; /* Optional: Add padding for spacing within each grid item */
+  padding: 5px;
 }
 
 /* Our Work */
@@ -326,6 +325,8 @@ nav ul li a {
   height: auto; 
 }
 
+
+/* Footer */
 footer {
   background-color: #B3272D;
   padding: 20px;
@@ -334,6 +335,7 @@ footer {
 
 footer p {
   color: white;
+  margin-top: 10px; /* Add spacing between the navigation links and "Team Unreliable" */
 }
 
 footer nav ul {
@@ -341,7 +343,7 @@ footer nav ul {
   padding: 0;
   display: flex;
   gap: 20px;
-  justify-content: center; 
+  justify-content: center; /* Center-align the navigation links horizontally */
 }
 
 footer nav ul li {
@@ -354,4 +356,3 @@ footer nav ul li a {
   font-weight: bold;
   font-size: 18px;
 }
-
