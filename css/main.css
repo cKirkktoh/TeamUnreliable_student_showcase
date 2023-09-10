@@ -156,3 +156,28 @@ nav ul li a {
     max-width: 100%;
     height: auto;
 }
+
+.testimonials {
+    background-color: #E2231A;
+    padding: 20px; /* Add padding for spacing */
+    color: white; /* Set text color to white for better visibility */
+    text-align: center; /* Center align the content */
+  }
+
+  .testimonial-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .testimonial {
+    width: 300px; /* Adjust the width of each testimonial as needed */
+    background-color: white; /* Set the background color of each testimonial */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: #333; /* Set the text color of each testimonial */
+  }
