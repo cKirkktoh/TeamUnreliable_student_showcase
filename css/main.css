@@ -1,0 +1,158 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  /* Global styles */
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  .hidden {
+    display: none;
+  }
+  
+  /* Main navigation styles */
+header {
+    height: 154px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo img {
+    width: 360px; /* Set the width to 360px */
+    height: 90px; /* Set the height to 137px */
+    max-height: 100%; /* Ensure the height scales appropriately */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+    font-size: 18px; /* Adjust font size as needed */
+}
+
+/* Hero Image */
+#hero {
+    position: relative; /* Add position:relative to the parent container */
+    text-align: center; /* Center-align text */
+    padding: 20px; /* Add some padding for spacing */
+    background-image: url(../images/image.png);
+    height: 930px;
+  }
+  
+  /* Create an overlay using ::before pseudo-element */
+  #hero::before {
+    content: ""; /* Required for pseudo-elements */
+    position: absolute; /* Position the overlay */
+    top: 0; /* Position from the top of the parent container */
+    left: 0; /* Position from the left of the parent container */
+    width: 100%; /* Cover the entire width of the parent container */
+    height: 100%; /* Cover the entire height of the parent container */
+    background-color: #B3272D; /* Red background color */
+    opacity: 0.7; /* Set the opacity for the overlay */
+    z-index: 1; /* Ensure the overlay is above the background image */
+  }
+  
+  .container {
+    display: inline-block; /* Center-align the container */
+    position: relative; /* Add position:relative to center-align child elements */
+    z-index: 2; /* Ensure the container and its contents are above the overlay */
+  }
+  
+  h2 {
+    padding:10px ;
+    font-size: 46px
+  }
+
+/*welcome*/
+.centered-section {
+    text-align: center;
+}
+
+.headline {
+    font-size: 42px;
+    color: #646469;
+}
+
+.subheadline {
+    font-size: 72px;
+    color: #E2231A;
+}
+
+/*video*/
+.center {
+    text-align: center;
+  }
+
+  /* Style for the section */
+  .section {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Style for the text content */
+.section {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin: 0 auto; /* Center the section horizontally */
+    max-width: 800px; /* Adjust the max width as needed */
+}
+
+/* Style for the text content */
+.section-content {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Style for the title */
+.section-title {
+    font-size: 55px;
+    font-weight: bold;
+    color: #E2231A;
+}
+
+/* Style for the paragraph */
+.section-paragraph {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #E2231A;
+}
+
+/* Style for the image */
+.section-image {
+    flex: 1;
+    text-align: center;
+}
+
+.section-image img {
+    max-width: 100%;
+    height: auto;
+}
